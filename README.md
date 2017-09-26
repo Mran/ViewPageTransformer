@@ -229,6 +229,12 @@ public class  DepthCardTransformer implements ViewPager.PageTransformer {
 
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/51293176.jpg)
 ```java
+/**
+ * Created by M on 2017/9/21.
+ * 这个要配和在ViewPager里设置android:clipChildren="false"
+ * android:margin="xxdp"
+ * 在ViewPager的外层里设置android:clipChildren="false"
+ */
 public class ZoominPagerTransFormer implements ViewPager.PageTransformer {
     @Override
     public void transformPage(View page, float position) {
