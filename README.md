@@ -1,5 +1,5 @@
-# ViewPageTransformer
 ## 书籍翻页渐隐
+
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/44602896.jpg)
 ```java
 public class BookFlippageFadePageTransormer implements ViewPager.PageTransformer {
@@ -28,7 +28,8 @@ public class BookFlippageFadePageTransormer implements ViewPager.PageTransformer
 }
 
 ```
-##翻页旋转
+## 翻页旋转
+
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/2974439.jpg)
 ```java
 public class FilpPageRotationPageTransformer implements ViewPager.PageTransformer {
@@ -56,7 +57,8 @@ public class FilpPageRotationPageTransformer implements ViewPager.PageTransforme
     }
 }
 ```
-##卡片绕中心旋转
+## 卡片绕中心旋转
+
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/49301453.jpg)
 ```java
 public class CardFlipoverPageTransormer implements PageTransformer {
@@ -101,7 +103,8 @@ public class CardFlipoverPageTransormer implements PageTransformer {
     }
 }
 ```
-##立方体旋转
+## 立方体旋转
+
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/64235752.jpg)
 ```java
 public class CubesPageTransformer implements ViewPager.PageTransformer {
@@ -128,7 +131,8 @@ public class CubesPageTransformer implements ViewPager.PageTransformer {
     }
 }
 ```
-##转盘旋转
+## 转盘旋转
+
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/6336470.jpg)
 ```java
 public class TurntablePageTransformer implements ViewPager.PageTransformer {
@@ -153,7 +157,8 @@ public class TurntablePageTransformer implements ViewPager.PageTransformer {
     }
 }
 ```
-##层叠缩放
+## 层叠缩放
+
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/61359792.jpg)
 ```java
 public class CascadeZoomPageTransformer implements ViewPager.PageTransformer {
@@ -177,7 +182,8 @@ public class CascadeZoomPageTransformer implements ViewPager.PageTransformer {
     }
 }
 ```
-##折叠向上
+## 折叠向上
+
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/37159823.jpg)
 ```java
 /**
@@ -219,7 +225,8 @@ public class  DepthCardTransformer implements ViewPager.PageTransformer {
     }
 }
 ```
-##滑动缩放
+## 滑动缩放
+
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/51293176.jpg)
 ```java
 public class ZoominPagerTransFormer implements ViewPager.PageTransformer {
@@ -248,7 +255,8 @@ public class ZoominPagerTransFormer implements ViewPager.PageTransformer {
     }
 }
 ```
-##卡片堆叠
+## 卡片堆叠
+
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/56385672.jpg)
 ```java
 public class CardStackPaegTransformer implements ViewPager.PageTransformer {
@@ -281,7 +289,8 @@ public class CardStackPaegTransformer implements ViewPager.PageTransformer {
     }
 }
 ```
-##卡片堆叠 进阶版
+## 卡片堆叠 进阶版
+
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/4091466.jpg)
 这个进阶版可以看到是在滑动结束后有一个弹跳的类似于果冻动画,这个实际上我是对Viewpage设置了滑动监听,在滑动状态改变时对当前的page设置一个缩放动画,这样就好了
 下面是果冻动画的代码,这里安利一个网站http://inloop.github.io/interpolator/,这个网站可以直观看到不同插值器的曲线变化情况,我的这个插值器也是在这里经过调整之后得到的.
