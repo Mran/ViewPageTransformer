@@ -86,8 +86,6 @@ public class MainActivity extends AppCompatActivity {
 
         /*卡片绕中心旋转*/
         mPageTransformer = new CardFlipoverPageTransormer();
-        /*折叠向上*/
-        mPageTransformer = new DepthCardTransformer();
           /*书籍翻页渐隐*/
         mPageTransformer = new BookFlippageFadePageTransormer();
         /*立方体旋转*/

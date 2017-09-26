@@ -20,10 +20,6 @@
 
         app:layout_constraintVertical_bias="0.817"/>
 
-    <!--<com.mran.cardpage.CardPage-->
-    <!--android:id="@+id/card_page"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="400dp"/>-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
