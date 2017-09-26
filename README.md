@@ -299,7 +299,7 @@ public class CardStackPaegTransformer implements ViewPager.PageTransformer {
 
 ![](http://oe38oe3ti.bkt.clouddn.com/17-9-26/4091466.jpg)
 这个进阶版可以看到是在滑动结束后有一个弹跳的类似于果冻动画,这个实际上我是对Viewpage设置了滑动监听,在滑动状态改变时对当前的page设置一个缩放动画,这样就好了
-下面是果冻动画的代码,这里安利一个网站http://inloop.github.io/interpolator/,这个网站可以直观看到不同插值器的曲线变化情况,我的这个插值器也是在这里经过调整之后得到的.
+下面是果冻动画的代码,这里安利一个网站[http://inloop.github.io/interpolator/](http://inloop.github.io/interpolator/),这个网站可以直观看到不同插值器的曲线变化情况,我的这个插值器也是在这里经过调整之后得到的.
 ```java
 /*配合以下代码可以实现滑动结束后的果冻效果*/
 int mCurrentPosition=0;
