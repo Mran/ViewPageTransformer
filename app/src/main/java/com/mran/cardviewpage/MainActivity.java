@@ -13,8 +13,6 @@ import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mran.cardpage.CardPage;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +20,7 @@ import static com.mran.cardviewpage.R.drawable.e;
 import static com.mran.cardviewpage.R.drawable.f;
 
 public class MainActivity extends AppCompatActivity {
-    CardPage mCardPage;
+
     TextView mTextView;
     ViewPager mViewPager;
     int mCurrentPosition=0;
@@ -37,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        mCardPage = (CardPage) findViewById(R.id.card_page);
+
         mTextView = (TextView) findViewById(R.id.textview);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mViewPager.setPageMargin(1);
@@ -103,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
         /*卡片堆叠*/
         mPageTransformer = new CardStackPaegTransformer();
+
         mViewPager.setPageTransformer(true, mPageTransformer);
 
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -114,9 +113,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 Log.d("MainActivity", "onPageSelected: position" + position);
-                mImageViewList.get(mCurrentPosition ).clearAnimation();
-                mCurrentPosition = position;
-                mImageViewList.get(mCurrentPosition).startAnimation(mAnimation);
+                mImageViewList.get(mCurrentPosition ).clearAnimation();/*//把上一个page的动画取消掉*/
+                mCurrentPosition = position;/*更新当前的page位置*/
+                mImageViewList.get(mCurrentPosition).startAnimation(mAnimation);/*开始动画*/
 
             }
 
