@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main2Activity">
+
+    <Button
+        android:id="@+id/BookFlippageFadePageTransormer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BookFlippageFadePageTransormer" />
+
+    <Button
+        android:id="@+id/CardFlipoverPageTransormer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CardFlipoverPageTransormer" />
+
+    <Button
+        android:id="@+id/CardStackPaegTransformer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CardStackPaegTransformer" />
+
+    <Button
+        android:id="@+id/CascadeZoomPageTransformer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CascadeZoomPageTransformer" />
+
+    <Button
+        android:id="@+id/CubesPageTransformer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CubesPageTransformer" />
+
+    <Button
+        android:id="@+id/DepthCardTransformer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DepthCardTransformer" />
+
+    <Button
+        android:id="@+id/FilpPageRotationPageTransformer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FilpPageRotationPageTransformer" />
+
+    <Button
+        android:id="@+id/TurntablePageTransformer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TurntablePageTransformer" />
+
+    <Button
+        android:id="@+id/ZoominPagerTransFormer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ZoominPagerTransFormer" />
+</LinearLayout>

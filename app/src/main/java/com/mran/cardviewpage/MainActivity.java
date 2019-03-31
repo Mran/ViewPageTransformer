@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView mTextView;
     ViewPager mViewPager;
-    int mCurrentPosition=0;
+    int mCurrentPosition = 0;
     ViewPager.PageTransformer mPageTransformer;
     Animation mAnimation;
     List<ImageView> mImageViewList = new ArrayList<>();
@@ -82,25 +82,36 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        /*卡片绕中心旋转*/
-        mPageTransformer = new CardFlipoverPageTransormer();
-          /*书籍翻页渐隐*/
-        mPageTransformer = new BookFlippageFadePageTransormer();
-        /*立方体旋转*/
-        mPageTransformer = new CubesPageTransformer();
-       /* 转盘旋转*/
-        mPageTransformer = new TurntablePageTransformer();
-       /* 翻页旋转*/
-        mPageTransformer = new FilpPageRotationPageTransformer();
-        /*单层叠缩放*/
-        mPageTransformer = new CascadeZoomPageTransformer();
-         /*折叠向上*/
-        mPageTransformer = new DepthCardTransformer();
-        /*滑动缩放*/
-        mPageTransformer = new ZoominPagerTransFormer();
-
-        /*卡片堆叠*/
-        mPageTransformer = new CardStackPaegTransformer();
+//        /*卡片绕中心旋转*/
+//        mPageTransformer = new CardFlipoverPageTransormer();
+//        /*书籍翻页渐隐*/
+//        mPageTransformer = new BookFlippageFadePageTransormer();
+//        /*立方体旋转*/
+//        mPageTransformer = new CubesPageTransformer();
+//        /* 转盘旋转*/
+//        mPageTransformer = new TurntablePageTransformer();
+//        /* 翻页旋转*/
+//        mPageTransformer = new FilpPageRotationPageTransformer();
+//        /*单层叠缩放*/
+//        mPageTransformer = new CascadeZoomPageTransformer();
+//        /*折叠向上*/
+//        mPageTransformer = new DepthCardTransformer();
+//        /*滑动缩放*/
+//        mPageTransformer = new ZoominPagerTransFormer();
+//
+//        /*卡片堆叠*/
+//        mPageTransformer = new CardStackPaegTransformer();
+        String clazzName = getIntent().getStringExtra("PageTransormer");
+        try {
+            Class c = Class.forName(clazzName);
+            mPageTransformer = (ViewPager.PageTransformer) c.newInstance();
+        } catch (ClassNotFoundException e1) {
+            e1.printStackTrace();
+        } catch (IllegalAccessException e1) {
+            e1.printStackTrace();
+        } catch (InstantiationException e1) {
+            e1.printStackTrace();
+        }
 
         mViewPager.setPageTransformer(true, mPageTransformer);
 
@@ -113,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 Log.d("MainActivity", "onPageSelected: position" + position);
-                mImageViewList.get(mCurrentPosition ).clearAnimation();/*//把上一个page的动画取消掉*/
+                mImageViewList.get(mCurrentPosition).clearAnimation();/*//把上一个page的动画取消掉*/
                 mCurrentPosition = position;/*更新当前的page位置*/
                 mImageViewList.get(mCurrentPosition).startAnimation(mAnimation);/*开始动画*/
 
